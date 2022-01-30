@@ -1,19 +1,19 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
 import collections
-
+import matplotlib.pyplot as plt
 
 
 def main(name):
+    #initialuze array to be used
     words = []
+    #open file and access data
     with open(name, 'r') as f:
         for line in f:
             for word in line.split():
+                #add words to array 
                 words.append(word)
+    #create another varaiable for counter           
     word_count = Counter(words)
+    #plot into a histogram
     plt.bar(word_count.keys(), word_count.values())
     plt.show()
 
