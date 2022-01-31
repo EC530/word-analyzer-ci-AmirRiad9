@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 def single_word_count(name):
     # initialize array to be used
     words = []
+
     # open file and access data
     with open(name, 'r') as f:
         for line in f:
@@ -18,7 +19,9 @@ def single_word_count(name):
 
 
 def count(word_count):
-    return len(word_count.keys())
+    sum_of = sum(word_count.values())
+    print(sum_of)
+    return sum_of
 
 
 def plot_hist(word_count):
