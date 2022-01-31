@@ -2,22 +2,31 @@ from collections import Counter
 import matplotlib.pyplot as plt
 
 
-def main(name):
-    #initialuze array to be used
+def single_word_count(name):
+    # initialize array to be used
     words = []
-    #open file and access data
+    # open file and access data
     with open(name, 'r') as f:
         for line in f:
             for word in line.split():
-                #add words to array 
+                # add words to array
                 words.append(word)
-    #create another varaiable for counter           
+    # create another variable for counter
     word_count = Counter(words)
-    #plot into a histogram
+    print(word_count)
+    return word_count
+
+
+def count(word_count):
+    return len(word_count.keys())
+
+
+def plot_hist(word_count):
+    # plot into a histogram
     plt.bar(word_count.keys(), word_count.values())
     plt.show()
 
+
 if __name__ == '__main__':
-    main('text1.txt')
-
-
+    count(single_word_count('text1.txt'))
+    plot_hist(single_word_count('text1.txt'))
