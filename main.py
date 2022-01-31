@@ -1,7 +1,7 @@
 from collections import Counter
 import matplotlib.pyplot as plt
 
-filename = 'text1.txt'
+filename = 'text2.txt'
 
 
 def single_word_count(name):
