@@ -2,9 +2,9 @@ from main import single_word_count
 from main import filename
 
 if filename == 'text1.txt':
-    output = ({'Test': 5, 'Hello': 1, 'This': 1, 'File': 1, 'Has': 1, 'How': 1, 'Many': 1, 'Words': 1})
+ output = ({'Test': 5, 'Hello': 1, 'This': 1, 'File': 1, 'Has': 1, 'How': 1, 'Many': 1, 'Words': 1})
 elif filename == 'text2.txt':
-    output = (
+ output = (
         {'cross': 3, 'farm': 3, 'hard': 3, 'start': 3, 'might': 3, 'story': 3, 'saw': 3, 'far': 3, 'sea': 3, 'draw': 3,
          'left': 3, 'late': 3, 'run': 3, "don't": 3, 'while': 3, 'press': 3, 'close': 3, 'night': 3, 'real': 3,
          'life': 3,
@@ -51,7 +51,7 @@ elif filename == 'text2.txt':
          'city': 1, 'tree': 1})
 
 
-def single_test():
+def test_single():
     check = single_word_count(filename)
 
     assert check == output
